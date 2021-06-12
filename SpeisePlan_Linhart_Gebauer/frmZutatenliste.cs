@@ -145,5 +145,15 @@ namespace SpeisePlan_Linhart_Gebauer
         {
             serialisierenZutaten();
         }
+
+        private void zutatEinerSpeiseHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Bitte wählen Sie eine Zutat aus!", "Achtung!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+        }
     }
 }

@@ -82,6 +82,7 @@
             this.listView1.Size = new System.Drawing.Size(611, 303);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.UseWaitCursor = true;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader6
@@ -157,6 +158,7 @@
             this.listView2.Size = new System.Drawing.Size(888, 303);
             this.listView2.TabIndex = 3;
             this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.UseWaitCursor = true;
             this.listView2.View = System.Windows.Forms.View.Details;
             this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
@@ -339,6 +341,7 @@
             this.RightToLeftLayout = true;
             this.Text = "Speiseplan";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.UseWaitCursor = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
