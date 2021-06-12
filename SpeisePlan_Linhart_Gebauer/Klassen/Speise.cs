@@ -18,6 +18,7 @@ namespace SpeisePlan_Linhart_Gebauer
         private int preis;
         private char speiseart;
         private string bildpfad;
+        private List<Zutat> zutatenListe;
 
 
         //Klassenvariablen
@@ -30,7 +31,8 @@ namespace SpeisePlan_Linhart_Gebauer
             autonum++;
         }
 
-        public Speise(int speiseID, string name, int preis, char speiseart, string bildpfad)
+        public Speise(int speiseID, string name, int preis, char speiseart, string bildpfad, List<Zutat> zutatenListe)
+
         {
             this.speiseID = autonum;
             autonum++;
@@ -38,6 +40,7 @@ namespace SpeisePlan_Linhart_Gebauer
             this.preis = preis;
             this.speiseart = speiseart;
             this.bildpfad = bildpfad;
+            this.zutatenListe = zutatenListe;
         }
 
         public int SpeiseID { get; set; }
@@ -45,6 +48,8 @@ namespace SpeisePlan_Linhart_Gebauer
         public int Preis { get; set; }
         public char Speiseart { get; set; }
         public string Bildpfad { get; set; }
+
+        public List <Zutat> ZutatenListe { get; set; }
 
         public static int Autonum
         {

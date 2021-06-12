@@ -26,6 +26,7 @@ namespace SpeisePlan_Linhart_Gebauer
 
         #region Variable
         ListViewItem lvItem;
+        internal Speise speiseaktuell;
         internal List<Speise> speisenListe= new List<Speise>();
         internal XmlSerializer serializerSpeisen;
         frmZutatenliste frmZuListe = new frmZutatenliste();

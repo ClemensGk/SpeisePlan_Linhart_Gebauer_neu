@@ -152,8 +152,35 @@ namespace SpeisePlan_Linhart_Gebauer
             {
                 MessageBox.Show("Bitte wählen Sie eine Zutat aus!", "Achtung!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }
 
-        }
+            }
+            lvItemZ = listView1.SelectedItems[0];
+            foreach (Zutat z in zutatenListe)
+            {
+                
+                if (z.Bezeichnung == lvItemZ.SubItems[2].Text)
+                {
+                    bool gefunden = false;
+                    if (Form1.f1.speiseaktuell.ZutatenListe != null)
+                    {
+                        foreach (Zutat zu in Form1.f1.speiseaktuell.ZutatenListe)
+                        {
+                            if (zu.Bezeichnung == z.Bezeichnung)
+                                gefunden = true;
+                        }
+                    }
+                    if (gefunden)
+                    {
+                        MessageBox.Show("Diese Zutat ist breits in dieser Speise vorhanden!", "Achtung!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                    }
+                    else
+                    {
+                        Form1.f1.speiseaktuell.ZutatenListe.Add(z); //läuft 
+                        einlesenSpeiseZutat();
+                        break;
+                    }
+                }
+            }
     }
 }
