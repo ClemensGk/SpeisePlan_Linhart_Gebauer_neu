@@ -81,7 +81,7 @@
             this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(923, 160);
+            this.listView1.Location = new System.Drawing.Point(893, 160);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(611, 303);
             this.listView1.TabIndex = 0;
@@ -230,7 +230,7 @@
             this.lblSpeisen.AutoSize = true;
             this.lblSpeisen.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSpeisen.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblSpeisen.Location = new System.Drawing.Point(276, 119);
+            this.lblSpeisen.Location = new System.Drawing.Point(337, 119);
             this.lblSpeisen.Name = "lblSpeisen";
             this.lblSpeisen.Size = new System.Drawing.Size(102, 29);
             this.lblSpeisen.TabIndex = 4;
@@ -242,7 +242,7 @@
             this.lblZutaten.AutoSize = true;
             this.lblZutaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZutaten.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblZutaten.Location = new System.Drawing.Point(1116, 119);
+            this.lblZutaten.Location = new System.Drawing.Point(1078, 119);
             this.lblZutaten.Name = "lblZutaten";
             this.lblZutaten.Size = new System.Drawing.Size(216, 29);
             this.lblZutaten.TabIndex = 5;
@@ -260,7 +260,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1537, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1509, 33);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.UseWaitCursor = true;
@@ -326,7 +326,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1537, 550);
+            this.ClientSize = new System.Drawing.Size(1509, 550);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblZutaten);
