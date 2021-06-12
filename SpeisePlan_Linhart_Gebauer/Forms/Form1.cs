@@ -304,8 +304,9 @@ namespace SpeisePlan_Linhart_Gebauer
 
         private void erstellenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-           
+            frmWochenplan frmwochenplan = new frmWochenplan();
+            frmwochenplan.ShowDialog();
+
         }
     }
 }
