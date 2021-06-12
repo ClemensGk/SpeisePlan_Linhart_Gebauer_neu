@@ -37,7 +37,6 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.zutatenHnizufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zutatBearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zutatEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neueZutatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -67,6 +66,11 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // columnHeader10
+            // 
+            columnHeader10.Text = "Bild";
+            columnHeader10.Width = 150;
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -77,7 +81,7 @@
             this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(960, 160);
+            this.listView1.Location = new System.Drawing.Point(923, 160);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(611, 303);
             this.listView1.TabIndex = 0;
@@ -110,11 +114,10 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zutatenHnizufügenToolStripMenuItem,
-            this.zutatBearbeitenToolStripMenuItem,
             this.zutatEntfernenToolStripMenuItem,
             this.neueZutatToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 70);
             // 
             // zutatenHnizufügenToolStripMenuItem
             // 
@@ -123,17 +126,12 @@
             this.zutatenHnizufügenToolStripMenuItem.Text = "Zutat hinzufügen";
             this.zutatenHnizufügenToolStripMenuItem.Click += new System.EventHandler(this.zutatenHnizufügenToolStripMenuItem_Click);
             // 
-            // zutatBearbeitenToolStripMenuItem
-            // 
-            this.zutatBearbeitenToolStripMenuItem.Name = "zutatBearbeitenToolStripMenuItem";
-            this.zutatBearbeitenToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.zutatBearbeitenToolStripMenuItem.Text = "Zutat bearbeiten";
-            // 
             // zutatEntfernenToolStripMenuItem
             // 
             this.zutatEntfernenToolStripMenuItem.Name = "zutatEntfernenToolStripMenuItem";
-            this.zutatEntfernenToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.zutatEntfernenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zutatEntfernenToolStripMenuItem.Text = "Zutat entfernen";
+            this.zutatEntfernenToolStripMenuItem.Click += new System.EventHandler(this.zutatEntfernenToolStripMenuItem_Click);
             // 
             // neueZutatToolStripMenuItem
             // 
@@ -155,12 +153,13 @@
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(12, 160);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(888, 303);
+            this.listView2.Size = new System.Drawing.Size(851, 303);
             this.listView2.TabIndex = 3;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.UseWaitCursor = true;
             this.listView2.View = System.Windows.Forms.View.Details;
             this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            this.listView2.Click += new System.EventHandler(this.listView2_Click);
             // 
             // columnHeader1
             // 
@@ -236,17 +235,19 @@
             this.lblSpeisen.Size = new System.Drawing.Size(102, 29);
             this.lblSpeisen.TabIndex = 4;
             this.lblSpeisen.Text = "Speisen";
+            this.lblSpeisen.UseWaitCursor = true;
             // 
             // lblZutaten
             // 
             this.lblZutaten.AutoSize = true;
             this.lblZutaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZutaten.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblZutaten.Location = new System.Drawing.Point(1147, 119);
+            this.lblZutaten.Location = new System.Drawing.Point(1116, 119);
             this.lblZutaten.Name = "lblZutaten";
             this.lblZutaten.Size = new System.Drawing.Size(216, 29);
             this.lblZutaten.TabIndex = 5;
             this.lblZutaten.Text = "Zutaten der Speise";
+            this.lblZutaten.UseWaitCursor = true;
             // 
             // menuStrip1
             // 
@@ -259,9 +260,10 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1604, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1537, 33);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.UseWaitCursor = true;
             // 
             // speiseToolStripMenuItem
             // 
@@ -289,8 +291,9 @@
             // erstellenToolStripMenuItem
             // 
             this.erstellenToolStripMenuItem.Name = "erstellenToolStripMenuItem";
-            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
+            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.erstellenToolStripMenuItem.Text = "erstellen";
+            this.erstellenToolStripMenuItem.Click += new System.EventHandler(this.erstellenToolStripMenuItem_Click);
             // 
             // zutatenlisteToolStripMenuItem
             // 
@@ -312,22 +315,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Turquoise;
-            this.label1.Location = new System.Drawing.Point(823, 33);
+            this.label1.Location = new System.Drawing.Point(656, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 39);
             this.label1.TabIndex = 10;
             this.label1.Text = "Speiseplan";
-            // 
-            // columnHeader10
-            // 
-            columnHeader10.Text = "Bild";
-            columnHeader10.Width = 150;
+            this.label1.UseWaitCursor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 652);
+            this.ClientSize = new System.Drawing.Size(1537, 550);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblZutaten);
@@ -361,7 +360,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem zutatenHnizufügenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zutatBearbeitenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zutatEntfernenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem neueZutatToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;

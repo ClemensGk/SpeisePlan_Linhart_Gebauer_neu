@@ -22,7 +22,7 @@ namespace SpeisePlan_Linhart_Gebauer
             InitializeComponent();
         }
 
-        ListViewItem lvItemZ;
+       internal ListViewItem lvItemZ;
         internal List<Zutat> zutatenListe = new List<Zutat>();
         internal int inde;
         internal XmlSerializer serializerZutaten;
@@ -47,7 +47,7 @@ namespace SpeisePlan_Linhart_Gebauer
             try
             {
                 serializerZutaten = new XmlSerializer(zutatenListe.GetType());
-                FileStream fs = new FileStream("Zutatenliste.xml", FileMode.Create, FileAccess.Write, FileShare.None);
+                FileStream fs = new FileStream(Application.StartupPath + "\\../../../Zutatenliste.xml", FileMode.Create, FileAccess.Write, FileShare.None);
                 serializerZutaten.Serialize(fs, zutatenListe);
                 fs.Close();
             }
@@ -58,12 +58,12 @@ namespace SpeisePlan_Linhart_Gebauer
 
         }
 
-         internal void deserialisierenZutaten()
+        internal void deserialisierenZutaten()
         {
             try
             {
                 serializerZutaten = new XmlSerializer(zutatenListe.GetType());
-                FileStream fs = new FileStream("Zutatenliste.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+                FileStream fs = new FileStream(Application.StartupPath + "\\../../../Zutatenliste.xml", FileMode.Open, FileAccess.Read, FileShare.None);
                 zutatenListe = (List<Zutat>)serializerZutaten.Deserialize(fs);
                 fs.Close();
             }
@@ -114,7 +114,7 @@ namespace SpeisePlan_Linhart_Gebauer
             einlesenZutatenliste();
         }
 
-       
+
         private void zutatLöschenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count == 0)
@@ -137,7 +137,7 @@ namespace SpeisePlan_Linhart_Gebauer
             }
             catch
             {
-                MessageBox.Show("Kein Gast ausgewählt!");
+                MessageBox.Show("Keine Zutat ausgewählt!");
             }
         }
 
@@ -154,33 +154,65 @@ namespace SpeisePlan_Linhart_Gebauer
                 return;
 
             }
-            lvItemZ = listView1.SelectedItems[0];
-            foreach (Zutat z in zutatenListe)
-            {
-                
-                if (z.Bezeichnung == lvItemZ.SubItems[2].Text)
+            
+                lvItemZ = listView1.SelectedItems[0];
+                foreach (Zutat z in zutatenListe)
                 {
-                    bool gefunden = false;
-                    if (Form1.f1.speiseaktuell.ZutatenListe != null)
+
+                    if (z.Bezeichnung == lvItemZ.SubItems[2].Text)
                     {
-                        foreach (Zutat zu in Form1.f1.speiseaktuell.ZutatenListe)
+                        bool gefunden = false;
+                        if (Form1.f1.speiseaktuell.ZutatenListe != null)
                         {
-                            if (zu.Bezeichnung == z.Bezeichnung)
-                                gefunden = true;
+                            foreach (Zutat zu in Form1.f1.speiseaktuell.ZutatenListe)
+                            {
+                                if (zu.Bezeichnung == z.Bezeichnung)
+                                    gefunden = true;
+                            }
+                        }
+                        if (gefunden)
+                        {
+                            MessageBox.Show("Diese Zutat ist breits in dieser Speise vorhanden!", "Achtung!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
+                        }
+                        else
+                        {
+                            Form1.f1.speiseaktuell.ZutatenListe.Add(z); 
+                            einlesenSpeiseZutat();
+                            break;
                         }
                     }
-                    if (gefunden)
-                    {
-                        MessageBox.Show("Diese Zutat ist breits in dieser Speise vorhanden!", "Achtung!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        break;
-                    }
-                    else
-                    {
-                        Form1.f1.speiseaktuell.ZutatenListe.Add(z); //läuft 
-                        einlesenSpeiseZutat();
-                        break;
-                    }
+                this.Close();
+
                 }
+            
+          
+
+            
+        
+            
+        }
+
+       internal void einlesenSpeiseZutat()
+        {
+
+            Form1.f1.listView1.Items.Clear();
+
+            foreach (Zutat t in Form1.f1.speiseaktuell.ZutatenListe)
+            {
+                lvItemZ = new ListViewItem(t.Menge.ToString());
+                lvItemZ.SubItems.Add(t.Einheit);
+                lvItemZ.SubItems.Add(t.Bezeichnung);
+                lvItemZ.SubItems.Add(t.Allergene);
+                
+
+                Form1.f1.listView1.Items.Add(lvItemZ);
             }
+            Form1.f1.listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            Form1.f1.listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
+
+        }
+
     }
 }

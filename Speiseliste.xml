@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<ArrayOfSpeise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Speise>
+    <SpeiseID>2</SpeiseID>
+    <Name>Kebap</Name>
+    <Preis>5</Preis>
+    <Speiseart>72</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
+    <ZutatenListe>
+      <Zutat>
+        <Menge>1234</Menge>
+        <Einheit>asdf</Einheit>
+        <Bezeichnung>asdf</Bezeichnung>
+        <Allergene>asdf</Allergene>
+      </Zutat>
+    </ZutatenListe>
+  </Speise>
+  <Speise>
+    <SpeiseID>3</SpeiseID>
+    <Name>Schnitzel</Name>
+    <Preis>4</Preis>
+    <Speiseart>72</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>4</SpeiseID>
+    <Name>Kürbiscreme-Suppe</Name>
+    <Preis>2</Preis>
+    <Speiseart>86</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\uppe.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>5</SpeiseID>
+    <Name>Schoko-Eis</Name>
+    <Preis>1</Preis>
+    <Speiseart>78</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\eis.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>6</SpeiseID>
+    <Name>Vanille-Eis</Name>
+    <Preis>1</Preis>
+    <Speiseart>78</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\eis.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>7</SpeiseID>
+    <Name>Erdbeer-Eis</Name>
+    <Preis>1</Preis>
+    <Speiseart>78</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\eis.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>8</SpeiseID>
+    <Name>Haselnuss-Eis</Name>
+    <Preis>1</Preis>
+    <Speiseart>78</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\eis.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>9</SpeiseID>
+    <Name>Kuchen</Name>
+    <Preis>2</Preis>
+    <Speiseart>78</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>10</SpeiseID>
+    <Name>Pommes</Name>
+    <Preis>3</Preis>
+    <Speiseart>72</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>11</SpeiseID>
+    <Name>Burger</Name>
+    <Preis>7</Preis>
+    <Speiseart>72</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>12</SpeiseID>
+    <Name>Gulasch</Name>
+    <Preis>8</Preis>
+    <Speiseart>72</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>13</SpeiseID>
+    <Name>Frühlingsrolle</Name>
+    <Preis>2</Preis>
+    <Speiseart>86</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>14</SpeiseID>
+    <Name>Spargelsuppe</Name>
+    <Preis>2</Preis>
+    <Speiseart>86</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\uppe.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>15</SpeiseID>
+    <Name>Leberknödelsuppe</Name>
+    <Preis>2</Preis>
+    <Speiseart>86</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\uppe.jpg</Bildpfad>
+    <ZutatenListe />
+  </Speise>
+  <Speise>
+    <SpeiseID>16</SpeiseID>
+    <Name>Tomatensuppe</Name>
+    <Preis>2</Preis>
+    <Speiseart>86</Speiseart>
+    <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\uppe.jpg</Bildpfad>
+    <ZutatenListe>
+      <Zutat>
+        <Menge>3</Menge>
+        <Einheit>Stück</Einheit>
+        <Bezeichnung>Tomate</Bezeichnung>
+        <Allergene>B</Allergene>
+      </Zutat>
+    </ZutatenListe>
+  </Speise>
+</ArrayOfSpeise>

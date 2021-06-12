@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfZutat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Zutat>
+    <Menge>1234</Menge>
+    <Einheit>asdf</Einheit>
+    <Bezeichnung>asdf</Bezeichnung>
+    <Allergene>asdf</Allergene>
+  </Zutat>
+  <Zutat>
+    <Menge>3</Menge>
+    <Einheit>Stück</Einheit>
+    <Bezeichnung>Tomate</Bezeichnung>
+    <Allergene>B</Allergene>
+  </Zutat>
+</ArrayOfZutat>

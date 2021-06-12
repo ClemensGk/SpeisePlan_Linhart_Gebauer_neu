@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +69,12 @@
     <Compile Include="Forms\frmSpeisen.Designer.cs">
       <DependentUpon>frmSpeisen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmWochenplan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWochenplan.Designer.cs">
+      <DependentUpon>frmWochenplan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmZutatenliste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +94,9 @@
     <EmbeddedResource Include="Forms\frmSpeisen.resx">
       <DependentUpon>frmSpeisen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmWochenplan.resx">
+      <DependentUpon>frmWochenplan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmZutatenliste.resx">
       <DependentUpon>frmZutatenliste.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +110,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

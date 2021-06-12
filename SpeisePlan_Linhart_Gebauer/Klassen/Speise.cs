@@ -58,9 +58,6 @@ namespace SpeisePlan_Linhart_Gebauer
         }
 
 
-        public override string ToString()
-        {
-            return speiseID + ";" + name + ";" + preis + ";" + speiseart + ";" + bildpfad;
-        }
+       
     }
 }

@@ -53,7 +53,7 @@ namespace SpeisePlan_Linhart_Gebauer
             try
             {
                 serializerSpeisen = new XmlSerializer(speisenListe.GetType());
-                FileStream fs = new FileStream(Application.StartupPath + "\\Speiseliste.xml", FileMode.Create, FileAccess.Write, FileShare.None);
+                FileStream fs = new FileStream(Application.StartupPath + "\\../../../Speiseliste.xml", FileMode.Create, FileAccess.Write, FileShare.None);
                 serializerSpeisen.Serialize(fs, speisenListe);
                 fs.Close();
             }
@@ -69,7 +69,7 @@ namespace SpeisePlan_Linhart_Gebauer
             try
             {
                 serializerSpeisen = new XmlSerializer(speisenListe.GetType());
-                FileStream fs = new FileStream("Speiseliste.xml", FileMode.Open, FileAccess.Read, FileShare.None);
+                FileStream fs = new FileStream(Application.StartupPath + "\\../../../Speiseliste.xml", FileMode.Open, FileAccess.Read, FileShare.None);
                 speisenListe = (List<Speise>)serializerSpeisen.Deserialize(fs);
                 fs.Close();
             }
@@ -234,6 +234,7 @@ namespace SpeisePlan_Linhart_Gebauer
                 MessageBox.Show("Bitte wählen Sie eine Speise aus!");
                 return;
             }
+            lvItem = listView2.SelectedItems[0];
             frmZutatenliste frmZuListe = new frmZutatenliste();
             frmZuListe.ShowDialog();
         }
@@ -241,6 +242,70 @@ namespace SpeisePlan_Linhart_Gebauer
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listView2_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            if (listView2.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Bitte wählen Sie eine Speise aus!");
+                return;
+            }
+            lvItem = listView2.SelectedItems[0];
+            foreach (Speise s in speisenListe)
+            {
+                if (s.SpeiseID == Convert.ToInt32(lvItem.SubItems[1].Text))
+                {
+                    speiseaktuell = s;
+                    if (s.ZutatenListe != null)
+                    {
+                        foreach (Zutat z in s.ZutatenListe)
+                        {
+                            frmZutatenliste.frmzutatenliste.lvItemZ = new ListViewItem(z.Menge.ToString());
+                            frmZutatenliste.frmzutatenliste.lvItemZ.SubItems.Add(z.Einheit);
+                            frmZutatenliste.frmzutatenliste.lvItemZ.SubItems.Add(z.Bezeichnung);
+                            frmZutatenliste.frmzutatenliste.lvItemZ.SubItems.Add(z.Allergene);
+
+
+                            listView1.Items.Add(frmZutatenliste.frmzutatenliste.lvItemZ);
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+
+        private void zutatEntfernenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Keine Zutat ausgewählt!");
+                return;
+            }
+            //inde = lvItemZ.Index;
+            try
+            {
+                DialogResult dr =
+                  MessageBox.Show("Wollen Sie diese Zutat wirklich löschen?", "Achtung!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dr == DialogResult.Yes)
+                {
+                    //zutatenListe.RemoveAt(inde);
+
+                    frmZutatenliste.frmzutatenliste.einlesenSpeiseZutat();
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Keine Zutat ausgewählt!");
+            }
+        }
+
+        private void erstellenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+           
         }
     }
 }
