@@ -40,7 +40,9 @@ namespace SpeisePlan_Linhart_Gebauer
 
             // speisenListe.Add(new Speise(3, "Stück", 4, Convert.ToChar("H"), "\\images\\default.jpg"));
             deserialisierenSpeise();
+            IDsetzen();
             einlesenSpeise();
+            
         }
 
         #region Methoden
@@ -75,6 +77,18 @@ namespace SpeisePlan_Linhart_Gebauer
                 MessageBox.Show("Fehler beim Deserialisierender der Speise: " + ex.Message);
             }
         }
+        internal void IDsetzen()
+        {
+            int temp = 1;
+            foreach (Speise s in speisenListe)
+            {
+                if (s.SpeiseID > temp)
+                {
+                    temp = s.SpeiseID;
+                }
+            }
+            Speise.Autonum = temp + 1;
+        }
         #endregion
 
         private void zutatenHnizufügenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,7 +104,9 @@ namespace SpeisePlan_Linhart_Gebauer
 
         private void speiseHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            IDsetzen();
             hinzufuegenSpeise();
+            
         }
 
         private void einlesenSpeise()
@@ -99,7 +115,9 @@ namespace SpeisePlan_Linhart_Gebauer
             listView2.Items.Clear();
             for (int i = 0; i < speisenListe.Count; i++)
             {
-                lvItem = new ListViewItem(speisenListe[i].SpeiseID.ToString());
+                lvItem = new ListViewItem();
+                lvItem.ImageIndex = i;
+                lvItem.SubItems.Add(speisenListe[i].SpeiseID.ToString());
                 lvItem.SubItems.Add(speisenListe[i].Name);
                 lvItem.SubItems.Add(speisenListe[i].Preis.ToString());
                 lvItem.SubItems.Add(speisenListe[i].Speiseart.ToString());
@@ -152,11 +170,11 @@ namespace SpeisePlan_Linhart_Gebauer
             frmSpeisen frmSp = new frmSpeisen();
             frmSp.Text = "Speise bearbeiten";
             lvItem = listView2.SelectedItems[0];
-            frmSp.txtSpeiseID.Text = lvItem.SubItems[0].Text;
-            frmSp.txtName.Text = lvItem.SubItems[1].Text;
-            frmSp.txtPreis.Text = lvItem.SubItems[2].Text;
-            frmSp.comboBox1.Text = lvItem.SubItems[3].Text;
-            frmSp.txtBildpfad.Text = lvItem.SubItems[4].Text;
+            frmSp.txtSpeiseID.Text = lvItem.SubItems[1].Text;
+            frmSp.txtName.Text = lvItem.SubItems[2].Text;
+            frmSp.txtPreis.Text = lvItem.SubItems[3].Text;
+            frmSp.comboBox1.Text = lvItem.SubItems[4].Text;
+            frmSp.txtBildpfad.Text = lvItem.SubItems[5].Text;
             frmSp.ShowDialog();
             einlesenSpeise();
         }
@@ -184,7 +202,7 @@ namespace SpeisePlan_Linhart_Gebauer
         internal void showImages()
         {
             ImageList bilderListe = new ImageList();
-            bilderListe.ColorDepth = ColorDepth.Depth32Bit; //damit Bilder nicht so pixelig
+            bilderListe.ColorDepth = ColorDepth.Depth32Bit; //damit Bilder nicht so pixelig sind
             bilderListe.ImageSize = new System.Drawing.Size(32, 32);
             bilderListe.Images.Clear();
 
@@ -196,11 +214,11 @@ namespace SpeisePlan_Linhart_Gebauer
                 }
                 catch
                 {
-                    bilderListe.Images.Add(Image.FromFile(Application.StartupPath + "\\img\\default.jpg"));
+                    bilderListe.Images.Add(Image.FromFile(Application.StartupPath + "\\../../../img\\default.jpg"));
                     continue; 
                 }
             }
-            listView1.SmallImageList = bilderListe;
+            listView2.SmallImageList = bilderListe;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -217,6 +235,11 @@ namespace SpeisePlan_Linhart_Gebauer
             }
             frmZutatenliste frmZuListe = new frmZutatenliste();
             frmZuListe.ShowDialog();
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

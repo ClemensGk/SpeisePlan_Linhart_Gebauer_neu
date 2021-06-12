@@ -107,6 +107,7 @@ namespace SpeisePlan_Linhart_Gebauer
                 MessageBox.Show("Keine Zutat ausgewählt!");
                 return;
             }
+            inde = lvItemZ.Index;
             frmZutaten frmzutaten = new frmZutaten();
             frmzutaten.Text = "Zutat bearbeiten";
             frmzutaten.ShowDialog();
@@ -121,6 +122,7 @@ namespace SpeisePlan_Linhart_Gebauer
                 MessageBox.Show("Keine Zutat ausgewählt!");
                 return;
             }
+            inde = lvItemZ.Index;
             try
             {
                 DialogResult dr =

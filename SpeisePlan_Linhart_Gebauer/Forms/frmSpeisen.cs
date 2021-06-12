@@ -25,7 +25,7 @@ namespace SpeisePlan_Linhart_Gebauer
         {
             if (this.Text.Equals("Speise hinzufügen"))
             {
-                bildpfad = Application.StartupPath + "\\img\\default.jpg";
+                bildpfad = Application.StartupPath + "\\../../../img\\default.jpg";
                 picBox.Image = Image.FromFile(bildpfad);
                 txtBildpfad.Text = bildpfad;
             }
@@ -70,6 +70,7 @@ namespace SpeisePlan_Linhart_Gebauer
             catch
             {
                 MessageBox.Show("Es muss alles ausgefüllt werden!");
+                
                 return;
             }
             this.Close();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ColumnHeader columnHeader10;
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,6 +61,7 @@
             this.zutatenlisteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -75,7 +77,7 @@
             this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(688, 160);
+            this.listView1.Location = new System.Drawing.Point(960, 160);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(611, 303);
             this.listView1.TabIndex = 0;
@@ -141,6 +143,7 @@
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            columnHeader10,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -149,12 +152,13 @@
             this.listView2.ContextMenuStrip = this.contextMenuStrip2;
             this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(21, 170);
+            this.listView2.Location = new System.Drawing.Point(12, 160);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(623, 303);
+            this.listView2.Size = new System.Drawing.Size(888, 303);
             this.listView2.TabIndex = 3;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -178,7 +182,7 @@
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Bild";
+            this.columnHeader5.Text = "Bildpfad";
             this.columnHeader5.Width = 149;
             // 
             // contextMenuStrip2
@@ -225,7 +229,7 @@
             this.lblSpeisen.AutoSize = true;
             this.lblSpeisen.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSpeisen.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblSpeisen.Location = new System.Drawing.Point(249, 119);
+            this.lblSpeisen.Location = new System.Drawing.Point(276, 119);
             this.lblSpeisen.Name = "lblSpeisen";
             this.lblSpeisen.Size = new System.Drawing.Size(102, 29);
             this.lblSpeisen.TabIndex = 4;
@@ -236,7 +240,7 @@
             this.lblZutaten.AutoSize = true;
             this.lblZutaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZutaten.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblZutaten.Location = new System.Drawing.Point(872, 119);
+            this.lblZutaten.Location = new System.Drawing.Point(1147, 119);
             this.lblZutaten.Name = "lblZutaten";
             this.lblZutaten.Size = new System.Drawing.Size(216, 29);
             this.lblZutaten.TabIndex = 5;
@@ -253,7 +257,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1311, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1604, 33);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -306,17 +310,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Turquoise;
-            this.label1.Location = new System.Drawing.Point(570, 44);
+            this.label1.Location = new System.Drawing.Point(823, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 39);
             this.label1.TabIndex = 10;
             this.label1.Text = "Speiseplan";
             // 
+            // columnHeader10
+            // 
+            columnHeader10.Text = "Bild";
+            columnHeader10.Width = 150;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1311, 577);
+            this.ClientSize = new System.Drawing.Size(1604, 652);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblZutaten);
