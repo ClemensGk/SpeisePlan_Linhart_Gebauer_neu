@@ -117,27 +117,28 @@
             this.zutatEntfernenToolStripMenuItem,
             this.neueZutatToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(187, 92);
             // 
             // zutatenHnizufügenToolStripMenuItem
             // 
             this.zutatenHnizufügenToolStripMenuItem.Name = "zutatenHnizufügenToolStripMenuItem";
-            this.zutatenHnizufügenToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.zutatenHnizufügenToolStripMenuItem.Text = "Zutat hinzufügen";
+            this.zutatenHnizufügenToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.zutatenHnizufügenToolStripMenuItem.Text = "Zutatenliste anzeigen";
             this.zutatenHnizufügenToolStripMenuItem.Click += new System.EventHandler(this.zutatenHnizufügenToolStripMenuItem_Click);
             // 
             // zutatEntfernenToolStripMenuItem
             // 
             this.zutatEntfernenToolStripMenuItem.Name = "zutatEntfernenToolStripMenuItem";
-            this.zutatEntfernenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zutatEntfernenToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.zutatEntfernenToolStripMenuItem.Text = "Zutat entfernen";
             this.zutatEntfernenToolStripMenuItem.Click += new System.EventHandler(this.zutatEntfernenToolStripMenuItem_Click);
             // 
             // neueZutatToolStripMenuItem
             // 
             this.neueZutatToolStripMenuItem.Name = "neueZutatToolStripMenuItem";
-            this.neueZutatToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.neueZutatToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.neueZutatToolStripMenuItem.Text = "neue Zutat";
+            this.neueZutatToolStripMenuItem.Click += new System.EventHandler(this.neueZutatToolStripMenuItem_Click);
             // 
             // listView2
             // 
@@ -291,7 +292,7 @@
             // erstellenToolStripMenuItem
             // 
             this.erstellenToolStripMenuItem.Name = "erstellenToolStripMenuItem";
-            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
             this.erstellenToolStripMenuItem.Text = "erstellen";
             this.erstellenToolStripMenuItem.Click += new System.EventHandler(this.erstellenToolStripMenuItem_Click);
             // 

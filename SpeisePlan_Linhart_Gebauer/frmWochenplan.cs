@@ -19,6 +19,29 @@ namespace SpeisePlan_Linhart_Gebauer
             frmwochenplan = this;
             InitializeComponent();
         }
+        private void frmWochenplan_Load(object sender, EventArgs e)
+        {
+
+
+            Random rnd = new Random();
+            int r = rnd.Next(0, Form1.f1.speisenListe.Count());
+
+            for (int i = 0; i < Form1.f1.speisenListe.Count(); i++)
+            {
+
+                if(r == Form1.f1.speisenListe[i].SpeiseID)  // && Form1.f1.speisenListe[i].Speiseart.Equals("V")
+
+                {
+                    txtMoHaupt.Text = Form1.f1.speisenListe[i].Name;
+                }
+            }
+
+
+
+
+
+
+        }
 
         private void btnAbbrechen_Click(object sender, EventArgs e)
         {
@@ -55,5 +78,7 @@ namespace SpeisePlan_Linhart_Gebauer
             wordapp.ActiveDocument.FormFields["FrNach"].Result = txtFrNach.Text;
 
         }
+
+       
     }
 }

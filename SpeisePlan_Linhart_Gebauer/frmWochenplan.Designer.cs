@@ -307,6 +307,7 @@ namespace SpeisePlan_Linhart_Gebauer
             this.Controls.Add(this.label1);
             this.Name = "frmWochenplan";
             this.Text = "frmWochenplan";
+            this.Load += new System.EventHandler(this.frmWochenplan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

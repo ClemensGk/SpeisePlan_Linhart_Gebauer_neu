@@ -27,7 +27,8 @@ namespace SpeisePlan_Linhart_Gebauer
         #region Variable
         ListViewItem lvItem;
         internal Speise speiseaktuell;
-        internal List<Speise> speisenListe= new List<Speise>();
+        public List<Speise> speisenListe = new List<Speise>();
+       
         internal XmlSerializer serializerSpeisen;
         frmZutatenliste frmZuListe = new frmZutatenliste();
         #endregion
@@ -307,6 +308,12 @@ namespace SpeisePlan_Linhart_Gebauer
             frmWochenplan frmwochenplan = new frmWochenplan();
             frmwochenplan.ShowDialog();
 
+        }
+
+        private void neueZutatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmZutatenliste frmZuListe = new frmZutatenliste();
+            frmZuListe.ShowDialog();
         }
     }
 }
