@@ -107,6 +107,7 @@ namespace SpeisePlan_Linhart_Gebauer
                 MessageBox.Show("Keine Zutat ausgewählt!");
                 return;
             }
+            lvItemZ = listView1.SelectedItems[0];
             inde = lvItemZ.Index;
             frmZutaten frmzutaten = new frmZutaten();
             frmzutaten.Text = "Zutat bearbeiten";
@@ -122,6 +123,7 @@ namespace SpeisePlan_Linhart_Gebauer
                 MessageBox.Show("Keine Zutat ausgewählt!");
                 return;
             }
+            lvItemZ = listView1.SelectedItems[0];
             inde = lvItemZ.Index;
             try
             {
@@ -154,6 +156,14 @@ namespace SpeisePlan_Linhart_Gebauer
                 return;
 
             }
+
+            if(Form1.f1.listView2.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Es muss eine Speise vorher ausgewählt sein!", "Achtung!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             
                 lvItemZ = listView1.SelectedItems[0];
                 foreach (Zutat z in zutatenListe)
@@ -186,10 +196,6 @@ namespace SpeisePlan_Linhart_Gebauer
 
                 }
             
-          
-
-            
-        
             
         }
 

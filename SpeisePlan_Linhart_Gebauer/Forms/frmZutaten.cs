@@ -62,7 +62,7 @@ namespace SpeisePlan_Linhart_Gebauer
             }
             catch
             {
-                MessageBox.Show("Es muss alles ausgefüllt werden!");
+                MessageBox.Show("Es muss alles ausgefüllt werden und bei der Menge dürfen nur GANZE Zahlen stehen!");
             }
 
             frmZutatenliste.frmzutatenliste.einlesenZutatenliste();

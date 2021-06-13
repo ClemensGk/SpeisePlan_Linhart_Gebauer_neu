@@ -69,7 +69,7 @@ namespace SpeisePlan_Linhart_Gebauer
         }
             catch
             {
-                MessageBox.Show("Es muss alles ausgefüllt werden!");
+                MessageBox.Show("Es muss alles ausgefüllt werden und Preis dürfen nur ganze ZAHLEN sein!");
                 
                 return;
             }

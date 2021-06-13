@@ -6,14 +6,7 @@
     <Preis>5</Preis>
     <Speiseart>72</Speiseart>
     <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
-    <ZutatenListe>
-      <Zutat>
-        <Menge>1234</Menge>
-        <Einheit>asdf</Einheit>
-        <Bezeichnung>asdf</Bezeichnung>
-        <Allergene>asdf</Allergene>
-      </Zutat>
-    </ZutatenListe>
+    <ZutatenListe />
   </Speise>
   <Speise>
     <SpeiseID>3</SpeiseID>

@@ -28,7 +28,8 @@ namespace SpeisePlan_Linhart_Gebauer
         ListViewItem lvItem;
         internal Speise speiseaktuell;
         public List<Speise> speisenListe = new List<Speise>();
-       
+        internal int ind;
+        internal ListViewItem lvItemZutatenSpeise;
         internal XmlSerializer serializerSpeisen;
         frmZutatenliste frmZuListe = new frmZutatenliste();
         #endregion
@@ -40,7 +41,6 @@ namespace SpeisePlan_Linhart_Gebauer
             listView1.FullRowSelect = true;
             listView2.FullRowSelect = true;
 
-            // speisenListe.Add(new Speise(3, "Stück", 4, Convert.ToChar("H"), "\\images\\default.jpg"));
             deserialisierenSpeise();
             IDsetzen();
             einlesenSpeise();
@@ -95,7 +95,7 @@ namespace SpeisePlan_Linhart_Gebauer
 
         private void zutatenHnizufügenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            hinzufuegenZutaten();
+            anzeigenZutatenliste();
 
         }
 
@@ -284,14 +284,15 @@ namespace SpeisePlan_Linhart_Gebauer
                 MessageBox.Show("Keine Zutat ausgewählt!");
                 return;
             }
-            //inde = lvItemZ.Index;
+            lvItemZutatenSpeise = listView1.SelectedItems[0];
+            ind = lvItemZutatenSpeise.Index;
             try
             {
                 DialogResult dr =
                   MessageBox.Show("Wollen Sie diese Zutat wirklich löschen?", "Achtung!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
-                    //zutatenListe.RemoveAt(inde);
+                    speiseaktuell.ZutatenListe.RemoveAt(ind);
 
                     frmZutatenliste.frmzutatenliste.einlesenSpeiseZutat();
                 }

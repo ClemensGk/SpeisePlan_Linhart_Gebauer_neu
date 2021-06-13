@@ -1,15 +1,33 @@
 <?xml version="1.0"?>
 <ArrayOfZutat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Zutat>
-    <Menge>1234</Menge>
-    <Einheit>asdf</Einheit>
-    <Bezeichnung>asdf</Bezeichnung>
-    <Allergene>asdf</Allergene>
+    <Menge>2</Menge>
+    <Einheit>Stück</Einheit>
+    <Bezeichnung>Eier</Bezeichnung>
+    <Allergene>D</Allergene>
   </Zutat>
   <Zutat>
     <Menge>3</Menge>
     <Einheit>Stück</Einheit>
     <Bezeichnung>Tomate</Bezeichnung>
     <Allergene>B</Allergene>
+  </Zutat>
+  <Zutat>
+    <Menge>500</Menge>
+    <Einheit>Gramm</Einheit>
+    <Bezeichnung>Mehl</Bezeichnung>
+    <Allergene>G</Allergene>
+  </Zutat>
+  <Zutat>
+    <Menge>3</Menge>
+    <Einheit>Scheiben</Einheit>
+    <Bezeichnung>Schinken</Bezeichnung>
+    <Allergene>H</Allergene>
+  </Zutat>
+  <Zutat>
+    <Menge>1</Menge>
+    <Einheit>Kilo</Einheit>
+    <Bezeichnung>Kürbis</Bezeichnung>
+    <Allergene>A</Allergene>
   </Zutat>
 </ArrayOfZutat>

@@ -278,7 +278,7 @@ namespace SpeisePlan_Linhart_Gebauer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 546);
+            this.ClientSize = new System.Drawing.Size(985, 541);
             this.Controls.Add(this.btnInWordDrucken);
             this.Controls.Add(this.btnAbbrechen);
             this.Controls.Add(this.txtFrNach);
