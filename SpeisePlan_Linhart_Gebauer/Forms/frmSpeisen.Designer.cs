@@ -49,8 +49,9 @@ namespace SpeisePlan_Linhart_Gebauer
             // btnSpeichern
             // 
             this.btnSpeichern.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpeichern.ForeColor = System.Drawing.Color.Blue;
             this.btnSpeichern.Location = new System.Drawing.Point(292, 358);
-            this.btnSpeichern.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSpeichern.Margin = new System.Windows.Forms.Padding(4);
             this.btnSpeichern.Name = "btnSpeichern";
             this.btnSpeichern.Size = new System.Drawing.Size(193, 69);
             this.btnSpeichern.TabIndex = 42;
@@ -61,8 +62,9 @@ namespace SpeisePlan_Linhart_Gebauer
             // btnAbbrechen
             // 
             this.btnAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbbrechen.ForeColor = System.Drawing.Color.Red;
             this.btnAbbrechen.Location = new System.Drawing.Point(292, 449);
-            this.btnAbbrechen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbbrechen.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbbrechen.Name = "btnAbbrechen";
             this.btnAbbrechen.Size = new System.Drawing.Size(193, 69);
             this.btnAbbrechen.TabIndex = 41;
@@ -79,7 +81,7 @@ namespace SpeisePlan_Linhart_Gebauer
             "H",
             "N"});
             this.comboBox1.Location = new System.Drawing.Point(251, 231);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(95, 37);
             this.comboBox1.TabIndex = 40;
@@ -89,7 +91,7 @@ namespace SpeisePlan_Linhart_Gebauer
             // 
             this.txtBildpfad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBildpfad.Location = new System.Drawing.Point(251, 298);
-            this.txtBildpfad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBildpfad.Margin = new System.Windows.Forms.Padding(4);
             this.txtBildpfad.Name = "txtBildpfad";
             this.txtBildpfad.ReadOnly = true;
             this.txtBildpfad.Size = new System.Drawing.Size(233, 34);
@@ -99,7 +101,7 @@ namespace SpeisePlan_Linhart_Gebauer
             // 
             this.txtPreis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPreis.Location = new System.Drawing.Point(251, 159);
-            this.txtPreis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPreis.Margin = new System.Windows.Forms.Padding(4);
             this.txtPreis.Name = "txtPreis";
             this.txtPreis.Size = new System.Drawing.Size(140, 34);
             this.txtPreis.TabIndex = 38;
@@ -109,7 +111,7 @@ namespace SpeisePlan_Linhart_Gebauer
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(251, 92);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(233, 34);
             this.txtName.TabIndex = 37;
@@ -118,7 +120,7 @@ namespace SpeisePlan_Linhart_Gebauer
             // 
             this.txtSpeiseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSpeiseID.Location = new System.Drawing.Point(251, 27);
-            this.txtSpeiseID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSpeiseID.Margin = new System.Windows.Forms.Padding(4);
             this.txtSpeiseID.Name = "txtSpeiseID";
             this.txtSpeiseID.ReadOnly = true;
             this.txtSpeiseID.Size = new System.Drawing.Size(233, 34);
@@ -129,7 +131,7 @@ namespace SpeisePlan_Linhart_Gebauer
             this.picBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBox.Location = new System.Drawing.Point(23, 344);
-            this.picBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBox.Margin = new System.Windows.Forms.Padding(4);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(212, 174);
             this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -206,7 +208,8 @@ namespace SpeisePlan_Linhart_Gebauer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 554);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(587, 562);
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.btnAbbrechen);
             this.Controls.Add(this.comboBox1);
@@ -221,7 +224,7 @@ namespace SpeisePlan_Linhart_Gebauer
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSpeisen";
             this.Text = "frmSpeisen";
             this.Load += new System.EventHandler(this.frmSpeisen_Load);

@@ -6,7 +6,20 @@
     <Preis>5</Preis>
     <Speiseart>72</Speiseart>
     <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
-    <ZutatenListe />
+    <ZutatenListe>
+      <Zutat>
+        <Menge>2</Menge>
+        <Einheit>Stück</Einheit>
+        <Bezeichnung>Eier</Bezeichnung>
+        <Allergene>D</Allergene>
+      </Zutat>
+      <Zutat>
+        <Menge>1</Menge>
+        <Einheit>Kilo</Einheit>
+        <Bezeichnung>Kürbis</Bezeichnung>
+        <Allergene>A</Allergene>
+      </Zutat>
+    </ZutatenListe>
   </Speise>
   <Speise>
     <SpeiseID>3</SpeiseID>
@@ -14,7 +27,14 @@
     <Preis>4</Preis>
     <Speiseart>72</Speiseart>
     <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\essen.jpg</Bildpfad>
-    <ZutatenListe />
+    <ZutatenListe>
+      <Zutat>
+        <Menge>500</Menge>
+        <Einheit>Gramm</Einheit>
+        <Bezeichnung>Mehl</Bezeichnung>
+        <Allergene>G</Allergene>
+      </Zutat>
+    </ZutatenListe>
   </Speise>
   <Speise>
     <SpeiseID>4</SpeiseID>
@@ -38,7 +58,14 @@
     <Preis>1</Preis>
     <Speiseart>78</Speiseart>
     <Bildpfad>C:\$Florian's Ordner\3CK\AP 3\Speiseplan NEU\SpeisePlan_Linhart_Gebauer_neu\img\eis.jpg</Bildpfad>
-    <ZutatenListe />
+    <ZutatenListe>
+      <Zutat>
+        <Menge>5</Menge>
+        <Einheit>Liter</Einheit>
+        <Bezeichnung>Wasser</Bezeichnung>
+        <Allergene>A</Allergene>
+      </Zutat>
+    </ZutatenListe>
   </Speise>
   <Speise>
     <SpeiseID>7</SpeiseID>

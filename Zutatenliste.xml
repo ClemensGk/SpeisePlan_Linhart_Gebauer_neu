@@ -30,4 +30,10 @@
     <Bezeichnung>Kürbis</Bezeichnung>
     <Allergene>A</Allergene>
   </Zutat>
+  <Zutat>
+    <Menge>5</Menge>
+    <Einheit>Liter</Einheit>
+    <Bezeichnung>Wasser</Bezeichnung>
+    <Allergene>A</Allergene>
+  </Zutat>
 </ArrayOfZutat>
